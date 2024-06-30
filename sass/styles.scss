@@ -13,13 +13,11 @@ body {
     justify-content: center;
     align-items: center;
     background-color: $cream;
+    padding-bottom: 10%;
+    padding-top: 10%;
 
     main {
-        width: 90%;
         max-width: 400px;
-        min-height: 50%;
-        display: flex;
-        flex-direction: column;
         background-color: $white;
         border-radius: 10px;
 
@@ -35,7 +33,7 @@ body {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            gap: 1.2rem;
+            gap: 1rem;
 
             #category {
                 font-family: $family-montserrat;
@@ -50,7 +48,7 @@ body {
                 font-family: $family-fraunces;
                 font-weight: 700;
                 color: $very-dark-blue;
-                font-size: calc(1.8rem + 1vw);
+                font-size: calc(1.5rem + 1vw);
                 line-height: calc(1.6rem + 1vw);
             }
             
@@ -61,8 +59,68 @@ body {
                 font-weight: 500;
                 line-height: calc(1.0rem + 1vw);
             }
+
+            #current-price {
+                font-family: $family-fraunces;
+                font-weight: 700;
+                font-size: 1.8rem;
+                color: $dark-cyan;
+            }
+
+            #old-price {
+                font-family: $family-montserrat;
+                font-size: calc(0.65rem + 1vw);
+                color: $dark-grayish-blue;
+                font-weight: 500;
+                line-height: calc(1.0rem + 1vw);
+                text-decoration: line-through;
+            }
+
+            p {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            button {
+                background-color: $dark-cyan;
+                color: $white;
+                padding: 0.8rem;
+                border-radius: 5px;
+                border: none;
+                display: flex;
+                justify-content: center;
+                gap: 0.8rem;
+                font-family: $family-montserrat;
+                font-weight: 700;
+                font-size: 0.9rem;
+
+                &:hover{
+                    background-color: hsl(155, 43%, 18%);
+                    cursor: pointer;
+                }
+            }
         }
 
     }
 
+}
+
+@media (min-width: 769px) {
+    main{
+        min-width: 50%;
+        display: flex;
+    }
+
+    picture{
+        width: 50%;
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    section {
+        width: 50%;
+    }
 }

@@ -13,13 +13,11 @@ body {
   justify-content: center;
   align-items: center;
   background-color: hsl(30, 38%, 92%);
+  padding-bottom: 10%;
+  padding-top: 10%;
 }
 body main {
-  width: 90%;
   max-width: 400px;
-  min-height: 50%;
-  display: flex;
-  flex-direction: column;
   background-color: hsl(0, 0%, 100%);
   border-radius: 10px;
 }
@@ -32,7 +30,7 @@ body main section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1.2rem;
+  gap: 1rem;
 }
 body main section #category {
   font-family: "Montserrat", sans-serif;
@@ -46,7 +44,7 @@ body main section h1 {
   font-family: "Fraunces", serif;
   font-weight: 700;
   color: hsl(212, 21%, 14%);
-  font-size: calc(1.8rem + 1vw);
+  font-size: calc(1.5rem + 1vw);
   line-height: calc(1.6rem + 1vw);
 }
 body main section #description {
@@ -55,6 +53,59 @@ body main section #description {
   color: hsl(228, 12%, 48%);
   font-weight: 500;
   line-height: calc(1rem + 1vw);
+}
+body main section #current-price {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: hsl(158, 36%, 37%);
+}
+body main section #old-price {
+  font-family: "Montserrat", sans-serif;
+  font-size: calc(0.65rem + 1vw);
+  color: hsl(228, 12%, 48%);
+  font-weight: 500;
+  line-height: calc(1rem + 1vw);
+  text-decoration: line-through;
+}
+body main section p {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+body main section button {
+  background-color: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+body main section button:hover {
+  background-color: hsl(155, 43%, 18%);
+  cursor: pointer;
+}
+
+@media (min-width: 769px) {
+  main {
+    min-width: 50%;
+    display: flex;
+  }
+  picture {
+    width: 50%;
+  }
+  picture img {
+    height: 100%;
+    width: 100%;
+  }
+  section {
+    width: 50%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
